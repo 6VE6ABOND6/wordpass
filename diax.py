@@ -1,42 +1,10 @@
 import regex
-import Project.engine_tr as engine_tr
- 
+import engine_tr as e_tr
 user = {}
-      
-def askRegion():
- while True:
-    country=input("Region..:Turkiye(tr),United States(us),Russia(ru),Brazil(br),India(in)..:")
-    if country not in ["tr", "us", "ru", "br", "in"]:
-     continue
-    else:  
-     match country:
-         case "tr":
-             trDef()
-         case "us":
-             usDef()    
-         case "ru":
-             ruDef()
-         case "br":
-             brDef()
-         case "in":
-             inDef()         
+ 
 
-def trDef():
-    
- pass
-  
-def usDef():
- pass
-    
-def ruDef():    
- pass
-            
-def brDef():     
- pass
 
-def inDef():    
- pass
-        
+ 
 def askinfoBasic():   
  def regexTest(data):
      if not regex.match(r"^\p{L}+$",data)or len(data) > 32:
@@ -122,10 +90,45 @@ def askinfoBasic():
     if len(birth)<8 or len(birth)>8 or birthDay<0 or birthDay>31 or birthMonth<0 or birthMonth>12  or birthYear<1600 or birthYear>2200 :
         print("smtng get wrong :/")
     else:
-     user["birthDay"]=birthDay
-     user["birthMonth"]=birthMonth
-     user["birthYear"]=birthYear
+     user["birthDay"]=str(birthDay)
+     user["birthMonth"]=str(birthMonth)
+     user["birthYear"]=str(birthYear)
      break
- askRegion()
-
-    
+ 
+def trDef():
+ askinfoBasic()
+ with open("test.txt","w",encoding="utf-8") as file:
+  for password in e_tr.engineHearth(user["name"],user["scndname"],user["birthYear"]):
+    file.write(password+"\n")
+       
+ 
+ 
+ 
+def usDef():
+ pass  
+def ruDef():    
+ pass       
+def brDef():     
+ pass
+def inDef():    
+ pass
+def askRegion():
+ while True:
+    country=input("Region..:Turkiye(tr),United States(us),Russia(ru),Brazil(br),India(in)..:")
+    if country not in ["tr", "us", "ru", "br", "in"]:
+     continue
+    else:  
+     match country:
+         case "tr":
+             trDef()
+         case "us":
+             usDef()    
+         case "ru":
+             ruDef()
+         case "br":
+             brDef()
+         case "in":
+             inDef()         
+if __name__ == "__main__":
+    askRegion()
+  
