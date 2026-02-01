@@ -125,7 +125,7 @@ def trDef():
             count += 1
             
   
-    print(art.GREEN + f"[OK] Process completed! {count} passwords saved to 'test.txt'" + art.RESET)
+    print(art.GREEN + f"[OK] Process completed! {count} passwords saved to 'letstry.txt'" + art.RESET)
     
     
     while True:
@@ -181,4 +181,5 @@ if __name__ == "__main__":
     except KeyboardInterrupt:
         print("\n\n 👋")
   
+
 
