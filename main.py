@@ -1,5 +1,8 @@
 import regex
 import engine_tr as e_tr
+import datetime as T
+
+todayYear=int(T.date.today().year)
 user = {}
  
 
@@ -44,6 +47,7 @@ def askinfoBasic():
   if regexTest(partner) is True:
    user["partner"]=partner
    break
+
   
  while True:
   child=str(input("Child Name:")).strip()
@@ -97,12 +101,18 @@ def askinfoBasic():
  
 def trDef():
  askinfoBasic()
+ name = user.get("name", "")
+ scndname = user.get("scndname", "")
+ birthYear = user.get("birthYear", "")
+ partner = user.get("partner", "")
+ child = user.get("child", "")
+ pet = user.get("pet", "")
+ username = user.get("username", "")
  with open("test.txt","w",encoding="utf-8") as file:
-  for password in e_tr.engineHearth(user["name"],user["scndname"],user["birthYear"]):
+  for password in e_tr.engineHearth(name,scndname,birthYear,partner,child,pet,username):
     file.write(password+"\n")
-       
- 
- 
+ file.close
+ print("ok")
  
 def usDef():
  pass  
