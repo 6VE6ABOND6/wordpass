@@ -9,7 +9,7 @@
 ### 1. Clone the Repository
 First, download the tool to your system.
 ```bash
-git clone [https://github.com/6VE6ABOND6/wordpass.git]
+git clone https://github.com/6VE6ABOND6/wordpass.git
 cd wordpass
 ```
 
