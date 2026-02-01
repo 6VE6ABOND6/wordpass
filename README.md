@@ -26,13 +26,13 @@ To start the tool, run the following command in your terminal:
 python3 wordpass.py
 ```
 Step-by-Step:
-Region Selection: Enter tr (for Turkey).
+1. Region Selection: Enter tr (for Turkey).
 
-Information Entry: Input known details about the target (Name, Surname, Partner's Name, etc.).
+2. Information Entry: Input known details about the target (Name, Surname, Partner's Name, etc.).
 
-If you don't know a detail, just press Enter to skip.
+    If you don't know a detail, just press Enter to skip.
 
-Generation: The program will save the generated passwords to test.txt within seconds.
+3. Generation: The program will save the generated passwords to letstry.txt within seconds.
 
 <img width="706" height="275" alt="Ekran görüntüsü 2026-02-01 213028" src="https://github.com/user-attachments/assets/38270474-1494-4b57-ba21-d8fb43bfdaa9" />
 
