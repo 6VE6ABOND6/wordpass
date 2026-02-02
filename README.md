@@ -1,7 +1,7 @@
 # wordpass 
 
 
-**wordpass** is an, wordlist generator designed for penetration testing and security research.
+**wordpass** is an, wordlist generator designed for penetration testing and security research. 
 
 ---
 
